@@ -1,0 +1,76 @@
+.big-button {
+   background: $purple;
+   border: none;
+   border-bottom: 0.6rem solid darken($purple, 10%);
+   border-radius: 5px;
+   color: $dark-text;
+   font-weight: bold;
+   font-size: $l-size;
+   width: 100%;
+   margin-bottom: $xl-size;
+   padding: 2.4rem;
+   transition: background 0.5s ease;
+
+   &:hover {
+      background: lighten($purple, $amount: 10%);
+   }
+
+   &:active {
+      background: darken($purple, $amount: 10%);
+      transition: none;
+   }
+
+   &:disabled {
+      opacity: 0.5;
+      background: $purple;
+   }
+}
+
+.button {
+   background: $purple;
+   border: none;
+   border-bottom: 0.3rem solid darken($purple, 10%);
+   color: $dark-text;
+   font-weight: 500;
+   border-radius: 5px;
+   padding: $s-size;
+   transition: background 0.5s ease;
+
+   &:hover {
+      background: lighten($purple, $amount: 10%);
+   }
+
+   &:active {
+      background: darken($purple, $amount: 10%);
+      transition: none;
+   }
+}
+
+.button--link {
+   background: none;
+   border: none;
+   color: $off-white;
+   font-weight: 500;
+   padding: 0;
+   height: 25px;
+   border-bottom: 1px solid transparent;
+   transition: all 0.5s ease;
+
+   &:hover {
+      color: white;
+      border-bottom: 1px solid white;
+   }
+
+   &:active {
+      color: rgb(167, 167, 167);
+      border-bottom: 1px solid rgb(167, 167, 167);
+      transition: none;
+   }
+}
+
+@media (max-width: $mobile-breakpoint) {
+   .big-button {
+      font-size: 2.5rem;
+      margin-bottom: $l-size;
+   }
+}

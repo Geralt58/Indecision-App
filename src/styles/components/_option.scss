@@ -1,0 +1,29 @@
+.option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: $l-size $m-size;
+    border-bottom: 1px solid lighten($light-blue, 10%);
+    margin: 0 $m-size;
+
+    &__text {
+        color: white;
+        font-weight: 500;
+        font-size: 2rem;
+        margin: 0 $m-size;
+        word-break: break-all;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .option {
+        flex-direction: column;
+
+        &__text {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    }
+ }
+ 
